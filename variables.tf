@@ -535,6 +535,12 @@ variable "node_security_group_enable_recommended_rules" {
   default     = true
 }
 
+variable "node_security_group_enable_recommended_egress_rule" {
+  description = "Determines whether to include the allow all egress rule in the recommended security group rules for the node security group created. Only applies when `node_security_group_enable_recommended_rules` is `true`"
+  type        = bool
+  default     = true
+}
+
 variable "node_security_group_tags" {
   description = "A map of additional tags to add to the node security group created"
   type        = map(string)
